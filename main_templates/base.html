@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+	    {%block head_title%} 
+	    	Portfolio 
+	    	{% if title %}
+	    		| {{ title }}
+	    	{% endif%} 
+	    {%endblock head_title%}
+	</title>
+    {% block style_links %}
+
+    {% endblock style_links %}
+    <style>
+    {% block style %}
+        
+    {% endblock style %}
+    </style>
+</head>
+
+<body>
+    {% block content %} 
+
+    {% endblock content %}
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    {% block js_src %}
+        
+    {% endblock js_src %}
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for category in categories %}
+    	<a href='{% url "skills_category" slug=category.slug %}'>{{category.name}}</a>
+    {% endfor %}
+{% endblock content %}
